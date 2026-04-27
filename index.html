@@ -27,14 +27,37 @@
 
     <!-- PHASE 0: BOOT SEQUENCE -->
     <div id="boot-sequence" class="boot-sequence">
-        <div class="boot-content">
-            <div class="boot-line" data-text="[SYSTEM_INITIALIZATION]"></div>
-            <div class="boot-line" data-text="PRIMARY_USER: SHAFRY YUSUF AL JUNI"></div>
-            <div class="boot-line" data-text="ACCESSING_NEURAL_LINK... [CONNECTED]"></div>
-            <div class="boot-line" data-text="UPLOADING ARCHIVES: PORTFOLIO 2026 // VERIFIED"></div>
-            <div class="boot-line" data-text="UPLOADING ARCHIVES: FOUNDERPLUS // VERIFIED"></div>
-            <div class="boot-line" data-text="UPLOADING ARCHIVES: UNIVERSITAS INDONESIA // VERIFIED"></div>
-            <div class="boot-line" data-text="[STATUS: SYSTEM_READY]"></div>
+        <div class="boot-loader">
+            <div class="loader-brand">
+                <span class="loader-icon">◈</span>
+                <span class="loader-name">JUN_OS_V3.0</span>
+            </div>
+            <div class="loader-status" id="loader-status">INITIALIZING...</div>
+            <div class="progress-container">
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill"></div>
+                    <div class="progress-glow" id="progress-glow"></div>
+                </div>
+                <div class="progress-percent" id="progress-percent">0%</div>
+            </div>
+            <div class="loader-modules">
+                <div class="module-item" data-module="0">
+                    <span class="mod-dot"></span>
+                    <span class="mod-label">KERNEL</span>
+                </div>
+                <div class="module-item" data-module="1">
+                    <span class="mod-dot"></span>
+                    <span class="mod-label">NEURAL_LINK</span>
+                </div>
+                <div class="module-item" data-module="2">
+                    <span class="mod-dot"></span>
+                    <span class="mod-label">ARCHIVES</span>
+                </div>
+                <div class="module-item" data-module="3">
+                    <span class="mod-dot"></span>
+                    <span class="mod-label">INTERFACE</span>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -55,7 +78,7 @@
                 <a href="#core-mission" class="nav-link">[MISSION]</a>
                 <a href="#registry" class="nav-link">[REGISTRY]</a>
                 <a href="#metrics" class="nav-link">[METRICS]</a>
-                <a href="#arsenal" class="nav-link">[ARSENAL]</a>
+                <a href="#arsenal" class="nav-link">[SKILLS]</a>
                 <a href="#contact" class="nav-link">[CONTACT]</a>
             </div>
             <div class="nav-status">
@@ -139,8 +162,9 @@
                 <h2 class="section-title">REGISTRY: EXPERIENCE_NODES</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="nodes-grid">
-                <div class="data-chip" data-status="active">
+            <div class="nodes-deck" id="nodes-deck">
+                <div class="deck-base"></div>
+                <div class="data-chip deck-card" data-status="active" data-index="0">
                     <div class="chip-header">
                         <span class="chip-id">NODE_01</span>
                         <span class="chip-status">[ACTIVE]</span>
@@ -164,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="data-chip" data-status="active">
+                <div class="data-chip deck-card" data-status="active" data-index="1">
                     <div class="chip-header">
                         <span class="chip-id">NODE_02</span>
                         <span class="chip-status">[ACTIVE]</span>
@@ -188,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="data-chip" data-status="archived">
+                <div class="data-chip deck-card" data-status="archived" data-index="2">
                     <div class="chip-header">
                         <span class="chip-id">NODE_03</span>
                         <span class="chip-status">[ARCHIVED]</span>
@@ -208,7 +232,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="data-chip" data-status="archived">
+                <div class="data-chip deck-card" data-status="archived" data-index="3">
                     <div class="chip-header">
                         <span class="chip-id">NODE_04</span>
                         <span class="chip-status">[ARCHIVED]</span>
@@ -266,67 +290,83 @@
             </div>
         </section>
 
-        <!-- PHASE 5: TECHNOLOGICAL ARSENAL -->
+        <!-- PHASE 5: CORE SKILLS -->
         <section id="arsenal" class="arsenal">
             <div class="section-header">
                 <span class="section-id">05</span>
-                <h2 class="section-title">TECHNOLOGICAL_ARSENAL</h2>
+                <h2 class="section-title">CORE_SKILLS</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="arsenal-grid">
-                <div class="power-module">
-                    <div class="module-hex">
-                        <svg viewBox="0 0 100 100" class="hex-svg">
-                            <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-border"/>
-                        </svg>
-                        <span class="module-icon">⚡</span>
-                    </div>
-                    <h3 class="module-name">AI_AUTOMATION</h3>
-                    <div class="module-specs">
-                        <span>Workflow Automation</span>
-                        <span>AI Agents</span>
-                        <span>CRM Integration</span>
-                    </div>
-                </div>
-                <div class="power-module">
-                    <div class="module-hex">
-                        <svg viewBox="0 0 100 100" class="hex-svg">
-                            <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-border"/>
-                        </svg>
-                        <span class="module-icon">🎯</span>
-                    </div>
-                    <h3 class="module-name">PERFORMANCE_ADS</h3>
-                    <div class="module-specs">
-                        <span>Meta Ads Orchestration</span>
-                        <span>Google Strategy</span>
-                        <span>TikTok Strategy</span>
+            <div class="skills-grid">
+                <div class="skill-card" data-tilt>
+                    <div class="skill-glow"></div>
+                    <div class="skill-content">
+                        <span class="skill-icon">⚡</span>
+                        <h3 class="skill-name">AI_AUTOMATION</h3>
+                        <div class="skill-specs">
+                            <span>Workflow Automation</span>
+                            <span>AI Agents</span>
+                            <span>CRM Integration</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="level-track">
+                                <div class="level-fill" style="width: 95%"></div>
+                            </div>
+                            <span class="level-label">PROFICIENCY: 95%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="power-module">
-                    <div class="module-hex">
-                        <svg viewBox="0 0 100 100" class="hex-svg">
-                            <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-border"/>
-                        </svg>
-                        <span class="module-icon">⚙️</span>
-                    </div>
-                    <h3 class="module-name">SYSTEMS_ENGINEERING</h3>
-                    <div class="module-specs">
-                        <span>Industrial System Optimization</span>
-                        <span>Data Analysis</span>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-glow"></div>
+                    <div class="skill-content">
+                        <span class="skill-icon">🎯</span>
+                        <h3 class="skill-name">PERFORMANCE_ADS</h3>
+                        <div class="skill-specs">
+                            <span>Meta Ads Orchestration</span>
+                            <span>Google Strategy</span>
+                            <span>TikTok Strategy</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="level-track">
+                                <div class="level-fill" style="width: 92%"></div>
+                            </div>
+                            <span class="level-label">PROFICIENCY: 92%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="power-module">
-                    <div class="module-hex">
-                        <svg viewBox="0 0 100 100" class="hex-svg">
-                            <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-border"/>
-                        </svg>
-                        <span class="module-icon">🎬</span>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-glow"></div>
+                    <div class="skill-content">
+                        <span class="skill-icon">⚙️</span>
+                        <h3 class="skill-name">SYSTEMS_ENGINEERING</h3>
+                        <div class="skill-specs">
+                            <span>Industrial System Optimization</span>
+                            <span>Data Analysis</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="level-track">
+                                <div class="level-fill" style="width: 88%"></div>
+                            </div>
+                            <span class="level-label">PROFICIENCY: 88%</span>
+                        </div>
                     </div>
-                    <h3 class="module-name">VISUAL_COMMAND</h3>
-                    <div class="module-specs">
-                        <span>Cinematography</span>
-                        <span>Adobe Creative Cloud</span>
-                        <span>Storytelling</span>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-glow"></div>
+                    <div class="skill-content">
+                        <span class="skill-icon">🎬</span>
+                        <h3 class="skill-name">VISUAL_COMMAND</h3>
+                        <div class="skill-specs">
+                            <span>Cinematography</span>
+                            <span>Adobe Creative Cloud</span>
+                            <span>Storytelling</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="level-track">
+                                <div class="level-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="level-label">PROFICIENCY: 85%</span>
+                        </div>
                     </div>
                 </div>
             </div>
