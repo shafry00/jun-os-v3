@@ -13,6 +13,15 @@
     <!-- CRT Noise Overlay -->
     <canvas id="crt-noise" class="crt-noise"></canvas>
 
+    <!-- Eye-Catch Transition Overlay -->
+    <div class="eye-catch" id="eye-catch">
+        <div class="slash slash-1"></div>
+        <div class="slash slash-2"></div>
+        <div class="slash slash-3"></div>
+        <div class="slash slash-4"></div>
+        <div class="slash slash-5"></div>
+    </div>
+
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-ring"></div>
@@ -118,11 +127,54 @@
                     </p>
                 </div>
                 <div class="hero-visual">
+                    <!-- Anime Speed Lines -->
+                    <div class="speed-lines" id="speed-lines"></div>
+                    
                     <div class="hud-ring"></div>
                     <div class="hud-ring inner"></div>
-                    <div class="hud-center">
-                        <span class="hud-initial">J</span>
+                    
+                    <!-- Anime Character Placeholder -->
+                    <div class="hud-center anime-portrait">
+                        <div class="anime-silhouette">
+                            <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Hair back -->
+                                <path d="M25 45 Q15 55 12 75 Q10 90 18 100 Q15 85 20 70 Q25 55 35 50" fill="#FFE600" opacity="0.6"/>
+                                <path d="M95 45 Q105 55 108 75 Q110 90 102 100 Q105 85 100 70 Q95 55 85 50" fill="#FFE600" opacity="0.6"/>
+                                <!-- Head shape -->
+                                <ellipse cx="60" cy="55" rx="32" ry="38" fill="#FFE600" opacity="0.15"/>
+                                <!-- Face inner -->
+                                <ellipse cx="60" cy="58" rx="26" ry="32" fill="#FFE600" opacity="0.3"/>
+                                <!-- Hair top -->
+                                <path d="M28 50 Q30 25 45 18 Q60 10 75 18 Q90 25 92 50 Q85 35 75 30 Q60 25 45 30 Q35 35 28 50" fill="#FFE600" opacity="0.8"/>
+                                <!-- Hair spikes -->
+                                <path d="M35 22 L25 12 L38 20" fill="#FFE600" opacity="0.7"/>
+                                <path d="M50 16 L48 5 L55 15" fill="#FFE600" opacity="0.7"/>
+                                <path d="M70 16 L78 6 L72 18" fill="#FFE600" opacity="0.7"/>
+                                <path d="M85 22 L95 15 L88 28" fill="#FFE600" opacity="0.7"/>
+                                <!-- Eyes (anime style sharp) -->
+                                <path d="M42 58 L48 56 L52 60 L46 62 Z" fill="#FFE600" opacity="0.9"/>
+                                <path d="M78 58 L72 56 L68 60 L74 62 Z" fill="#FFE600" opacity="0.9"/>
+                                <!-- Eye shine -->
+                                <circle cx="46" cy="58" r="2" fill="#FFF" opacity="0.8"/>
+                                <circle cx="74" cy="58" r="2" fill="#FFF" opacity="0.8"/>
+                                <!-- Nose -->
+                                <path d="M60 66 L58 72 L62 72" fill="#FFE600" opacity="0.5"/>
+                                <!-- Mouth (serious anime line) -->
+                                <path d="M52 82 Q60 80 68 82" stroke="#FFE600" stroke-width="1.5" opacity="0.7" fill="none"/>
+                                <!-- Neck -->
+                                <rect x="52" y="90" width="16" height="12" fill="#FFE600" opacity="0.2"/>
+                                <!-- Body / collar -->
+                                <path d="M35 102 L52 98 L60 105 L68 98 L85 102 L88 120 L32 120 Z" fill="#FFE600" opacity="0.25"/>
+                                <!-- Collar detail -->
+                                <path d="M52 98 L60 108 L68 98" stroke="#FFE600" stroke-width="1.5" opacity="0.5" fill="none"/>
+                                <!-- Shoulders -->
+                                <path d="M20 110 L35 102 L35 120 L20 125 Z" fill="#FFE600" opacity="0.15"/>
+                                <path d="M100 110 L85 102 L85 120 L100 125 Z" fill="#FFE600" opacity="0.15"/>
+                            </svg>
+                        </div>
+                        <div class="portrait-glow"></div>
                     </div>
+                    
                     <div class="hud-orbits">
                         <div class="orbit"></div>
                         <div class="orbit reverse"></div>
@@ -137,12 +189,18 @@
 
         <!-- PHASE 2: CORE MISSION -->
         <section id="core-mission" class="core-mission">
-            <div class="section-header">
+            <div class="section-header impact-header">
                 <span class="section-id">02</span>
-                <h2 class="section-title">CORE_MISSION</h2>
+                <h2 class="section-title" data-impact="CORE_MISSION">CORE_MISSION</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="mission-card">
+            <div class="mission-card anime-card">
+                <div class="anime-brackets">
+                    <span class="bracket-tl">&#12300;</span>
+                    <span class="bracket-tr">&#12301;</span>
+                    <span class="bracket-bl">&#12300;</span>
+                    <span class="bracket-br">&#12301;</span>
+                </div>
                 <div class="card-frame">
                     <div class="frame-corner tl"></div>
                     <div class="frame-corner tr"></div>
@@ -161,15 +219,21 @@
 
         <!-- PHASE 3: REGISTRY -->
         <section id="registry" class="registry">
-            <div class="section-header">
+            <div class="section-header impact-header">
                 <span class="section-id">03</span>
-                <h2 class="section-title">REGISTRY: EXPERIENCE_NODES</h2>
+                <h2 class="section-title" data-impact="REGISTRY">REGISTRY: EXPERIENCE_NODES</h2>
                 <div class="section-line"></div>
             </div>
             <div class="nodes-deck" id="nodes-deck">
                 <div class="deck-base"></div>
                 <!-- Node 01 -->
-                <div class="data-chip deck-card" data-status="active" data-index="0">
+                <div class="data-chip deck-card anime-card" data-status="active" data-index="0">
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                        <span class="bracket-bl">&#12300;</span>
+                        <span class="bracket-br">&#12301;</span>
+                    </div>
                     <div class="chip-header">
                         <span class="chip-id">NODE_01</span>
                         <span class="chip-status">[ACTIVE]</span>
@@ -195,7 +259,13 @@
                 </div>
 
                 <!-- Node 02 -->
-                <div class="data-chip deck-card" data-status="active" data-index="1">
+                <div class="data-chip deck-card anime-card" data-status="active" data-index="1">
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                        <span class="bracket-bl">&#12300;</span>
+                        <span class="bracket-br">&#12301;</span>
+                    </div>
                     <div class="chip-header">
                         <span class="chip-id">NODE_02</span>
                         <span class="chip-status">[ACTIVE]</span>
@@ -221,7 +291,13 @@
                 </div>
 
                 <!-- Node 03 -->
-                <div class="data-chip deck-card" data-status="archived" data-index="2">
+                <div class="data-chip deck-card anime-card" data-status="archived" data-index="2">
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                        <span class="bracket-bl">&#12300;</span>
+                        <span class="bracket-br">&#12301;</span>
+                    </div>
                     <div class="chip-header">
                         <span class="chip-id">NODE_03</span>
                         <span class="chip-status">[ARCHIVED]</span>
@@ -243,7 +319,13 @@
                 </div>
 
                 <!-- Node 04 -->
-                <div class="data-chip deck-card" data-status="archived" data-index="3">
+                <div class="data-chip deck-card anime-card" data-status="archived" data-index="3">
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                        <span class="bracket-bl">&#12300;</span>
+                        <span class="bracket-br">&#12301;</span>
+                    </div>
                     <div class="chip-header">
                         <span class="chip-id">NODE_04</span>
                         <span class="chip-status">[ARCHIVED]</span>
@@ -268,31 +350,47 @@
 
         <!-- PHASE 4: TACTICAL HUD -->
         <section id="metrics" class="metrics">
-            <div class="section-header">
+            <div class="section-header impact-header">
                 <span class="section-id">04</span>
-                <h2 class="section-title">TACTICAL_HUD: LIVE_METRICS</h2>
+                <h2 class="section-title" data-impact="TACTICAL_HUD">TACTICAL_HUD: LIVE_METRICS</h2>
                 <div class="section-line"></div>
             </div>
             <div class="metrics-grid">
-                <div class="metric-card">
+                <div class="metric-card anime-card">
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                    </div>
                     <div class="metric-label">QUANTUM_IMPRESSIONS</div>
                     <div class="metric-value" data-target="25200000">0</div>
                     <div class="metric-suffix">+</div>
                     <div class="metric-pulse"></div>
                 </div>
-                <div class="metric-card">
+                <div class="metric-card anime-card">
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                    </div>
                     <div class="metric-label">LEAD_CAPTURE_TOTAL</div>
                     <div class="metric-value" data-target="12211">0</div>
                     <div class="metric-suffix">UNITS</div>
                     <div class="metric-pulse"></div>
                 </div>
-                <div class="metric-card">
+                <div class="metric-card anime-card">
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                    </div>
                     <div class="metric-label">ORGANIC_ACCELERATION</div>
                     <div class="metric-value" data-target="40">0</div>
                     <div class="metric-suffix">%+ TRAFFIC_GROWTH</div>
                     <div class="metric-pulse"></div>
                 </div>
-                <div class="metric-card">
+                <div class="metric-card anime-card">
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                    </div>
                     <div class="metric-label">RESOURCE_OPTIMIZATION</div>
                     <div class="metric-value" data-target="25">0</div>
                     <div class="metric-suffix">%- CPC_REDUCTION</div>
@@ -303,13 +401,17 @@
 
         <!-- PHASE 5: CORE SKILLS -->
         <section id="arsenal" class="arsenal">
-            <div class="section-header">
+            <div class="section-header impact-header">
                 <span class="section-id">05</span>
-                <h2 class="section-title">CORE_SKILLS</h2>
+                <h2 class="section-title" data-impact="CORE_SKILLS">CORE_SKILLS</h2>
                 <div class="section-line"></div>
             </div>
             <div class="skills-grid">
-                <div class="skill-card" data-tilt>
+                <div class="skill-card anime-card" data-tilt>
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                    </div>
                     <div class="skill-glow"></div>
                     <div class="skill-content">
                         <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -333,7 +435,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card" data-tilt>
+                <div class="skill-card anime-card" data-tilt>
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                    </div>
                     <div class="skill-glow"></div>
                     <div class="skill-content">
                         <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -359,7 +465,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card" data-tilt>
+                <div class="skill-card anime-card" data-tilt>
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                    </div>
                     <div class="skill-glow"></div>
                     <div class="skill-content">
                         <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -381,7 +491,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card" data-tilt>
+                <div class="skill-card anime-card" data-tilt>
+                    <div class="anime-brackets">
+                        <span class="bracket-tl">&#12300;</span>
+                        <span class="bracket-tr">&#12301;</span>
+                    </div>
                     <div class="skill-glow"></div>
                     <div class="skill-content">
                         <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -410,12 +524,16 @@
 
         <!-- PHASE 6: EDUCATIONAL LOG -->
         <section id="education" class="education">
-            <div class="section-header">
+            <div class="section-header impact-header">
                 <span class="section-id">06</span>
-                <h2 class="section-title">EDUCATIONAL_LOG</h2>
+                <h2 class="section-title" data-impact="EDUCATIONAL_LOG">EDUCATIONAL_LOG</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="education-card">
+            <div class="education-card anime-card">
+                <div class="anime-brackets">
+                    <span class="bracket-tl">&#12300;</span>
+                    <span class="bracket-tr">&#12301;</span>
+                </div>
                 <div class="edu-source">[SOURCE: UNS_ACADEMIC_ARCHIVE]</div>
                 <div class="edu-degree">
                     <span class="degree-type">B.Eng.</span>
@@ -434,9 +552,9 @@
 
         <!-- PHASE 7: CONTACT PROTOCOL -->
         <section id="contact" class="contact">
-            <div class="section-header">
+            <div class="section-header impact-header">
                 <span class="section-id">07</span>
-                <h2 class="section-title">CONTACT_PROTOCOL</h2>
+                <h2 class="section-title" data-impact="CONTACT_PROTOCOL">CONTACT_PROTOCOL</h2>
                 <div class="section-line"></div>
             </div>
             <div class="contact-prompt">
