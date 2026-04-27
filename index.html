@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUN_OS_V3.0 | SHAFRY YUSUF AL JUNI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="cursor-crosshair h"></div>
+    <div class="cursor-crosshair v"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+    <!-- Sound Toggle -->
+    <button id="sound-toggle" class="sound-toggle" title="Toggle Sound Effects">
+        <span class="sound-icon">🔊</span>
+        <span class="sound-label">AUDIO</span>
+    </button>
+
+    <!-- PHASE 0: BOOT SEQUENCE -->
+    <div id="boot-sequence" class="boot-sequence">
+        <div class="boot-content">
+            <div class="boot-line" data-text="[SYSTEM_INITIALIZATION]"></div>
+            <div class="boot-line" data-text="PRIMARY_USER: SHAFRY YUSUF AL JUNI"></div>
+            <div class="boot-line" data-text="ACCESSING_NEURAL_LINK... [CONNECTED]"></div>
+            <div class="boot-line" data-text="UPLOADING ARCHIVES: PORTFOLIO 2026 // VERIFIED"></div>
+            <div class="boot-line" data-text="UPLOADING ARCHIVES: FOUNDERPLUS // VERIFIED"></div>
+            <div class="boot-line" data-text="UPLOADING ARCHIVES: UNIVERSITAS INDONESIA // VERIFIED"></div>
+            <div class="boot-line" data-text="[STATUS: SYSTEM_READY]"></div>
+        </div>
+    </div>
+
+    <!-- Main Interface -->
+    <main id="main-interface" class="main-interface hidden">
+        <!-- Scanning Line Overlay -->
+        <div class="scan-line"></div>
+        <div class="vignette"></div>
+
+        <!-- Navigation HUD -->
+        <nav class="nav-hud">
+            <div class="nav-brand">
+                <span class="nav-icon">◈</span>
+                <span class="nav-text">JUN_OS_V3.0</span>
+            </div>
+            <div class="nav-links">
+                <a href="#command-center" class="nav-link">[COMMAND]</a>
+                <a href="#core-mission" class="nav-link">[MISSION]</a>
+                <a href="#registry" class="nav-link">[REGISTRY]</a>
+                <a href="#metrics" class="nav-link">[METRICS]</a>
+                <a href="#arsenal" class="nav-link">[ARSENAL]</a>
+                <a href="#contact" class="nav-link">[CONTACT]</a>
+            </div>
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                <span class="status-text">ONLINE</span>
+            </div>
+        </nav>
+
+        <!-- PHASE 1: COMMAND CENTER (Hero) -->
+        <section id="command-center" class="command-center">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-label">
+                        <span class="label-line"></span>
+                        <span>IDENTIFICATION</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">SHAFRY</span>
+                        <span class="title-line">YUSUF</span>
+                        <span class="title-line accent">AL JUNI</span>
+                    </h1>
+                    <div class="hero-meta">
+                        <span class="meta-badge">GROWTH ARCHITECT</span>
+                        <span class="meta-divider">//</span>
+                        <span class="meta-badge">AI AUTOMATION SPECIALIST</span>
+                    </div>
+                    <div class="hero-status">
+                        <span class="status-icon">▶</span>
+                        <span class="status-text">OPTIMIZING_DIGITAL_ECOSYSTEMS</span>
+                    </div>
+                    <p class="hero-overview">
+                        I am Juni. I bridge the gap between Industrial Engineering logic and AI Marketing Automation. My mission is to transform complex data streams into autonomous growth engines with surgical precision.
+                    </p>
+                </div>
+                <div class="hero-visual">
+                    <div class="hud-ring"></div>
+                    <div class="hud-ring inner"></div>
+                    <div class="hud-center">
+                        <span class="hud-initial">J</span>
+                    </div>
+                    <div class="hud-orbits">
+                        <div class="orbit"></div>
+                        <div class="orbit reverse"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="scroll-text">SCROLL TO INITIALIZE</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- PHASE 2: CORE MISSION -->
+        <section id="core-mission" class="core-mission">
+            <div class="section-header">
+                <span class="section-id">02</span>
+                <h2 class="section-title">CORE_MISSION</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="mission-card">
+                <div class="card-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                </div>
+                <div class="card-content">
+                    <div class="mission-label">[MISSION_STATEMENT]</div>
+                    <p class="mission-text">
+                        At the intersection of engineering logic and digital creativity, I architect the infrastructure of future marketing. Leveraging my background in Industrial Engineering, I treat marketing not just as advertising, but as a system of variables to be optimized through AI integration and advanced automation protocols.
+                    </p>
+                </div>
+                <div class="card-scan"></div>
+            </div>
+        </section>
+
+        <!-- PHASE 3: REGISTRY -->
+        <section id="registry" class="registry">
+            <div class="section-header">
+                <span class="section-id">03</span>
+                <h2 class="section-title">REGISTRY: EXPERIENCE_NODES</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="nodes-grid">
+                <div class="data-chip" data-status="active">
+                    <div class="chip-header">
+                        <span class="chip-id">NODE_01</span>
+                        <span class="chip-status">[ACTIVE]</span>
+                    </div>
+                    <h3 class="chip-title">FOUNDERPLUS</h3>
+                    <div class="chip-meta">
+                        <span>[TYPE: STRATEGIC_GROWTH]</span>
+                    </div>
+                    <div class="chip-details">
+                        <div class="detail-row">
+                            <span class="detail-label">ROLE:</span>
+                            <span class="detail-value">Expert Growth & Marketing</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">PROTOCOL:</span>
+                            <span class="detail-value">Engineering scalable growth frameworks and high-performance marketing ecosystems.</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">EXECUTION:</span>
+                            <span class="detail-value">Integrating autonomous AI workflows into high-conversion business funnels.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-chip" data-status="active">
+                    <div class="chip-header">
+                        <span class="chip-id">NODE_02</span>
+                        <span class="chip-status">[ACTIVE]</span>
+                    </div>
+                    <h3 class="chip-title">UNIVERSITAS INDONESIA</h3>
+                    <div class="chip-meta">
+                        <span>[TYPE: KNOWLEDGE_TRANSFER]</span>
+                    </div>
+                    <div class="chip-details">
+                        <div class="detail-row">
+                            <span class="detail-label">ROLE:</span>
+                            <span class="detail-value">Business Mentor & Coach</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">PROTOCOL:</span>
+                            <span class="detail-value">Strategizing Go-To-Market (GTM) frameworks for the UI business incubator.</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">EXECUTION:</span>
+                            <span class="detail-value">Mentoring founders on operational efficiency and digital transformation.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-chip" data-status="archived">
+                    <div class="chip-header">
+                        <span class="chip-id">NODE_03</span>
+                        <span class="chip-status">[ARCHIVED]</span>
+                    </div>
+                    <h3 class="chip-title">TRIPUTRA PERSADA HORIZON EDUCATION</h3>
+                    <div class="chip-meta">
+                        <span>[TYPE: PERFORMANCE_MARKETING]</span>
+                    </div>
+                    <div class="chip-details">
+                        <div class="detail-row">
+                            <span class="detail-label">PROTOCOL:</span>
+                            <span class="detail-value">Managed IDR 30M/month ad budget across Meta, Google, and TikTok.</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">EXECUTION:</span>
+                            <span class="detail-value">Secured 24,000+ high-intent leads (CVR > 7%) through automated lead-nurturing architectures and AI Chatbot deployment.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-chip" data-status="archived">
+                    <div class="chip-header">
+                        <span class="chip-id">NODE_04</span>
+                        <span class="chip-status">[ARCHIVED]</span>
+                    </div>
+                    <h3 class="chip-title">PIXMED.ID</h3>
+                    <div class="chip-meta">
+                        <span>[TYPE: VISUAL_STORYTELLING]</span>
+                    </div>
+                    <div class="chip-details">
+                        <div class="detail-row">
+                            <span class="detail-label">ROLE:</span>
+                            <span class="detail-value">Managing Partner & Creative Director</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">EXECUTION:</span>
+                            <span class="detail-value">Produced cinematic TVCs and brand profiles for national government entities (Kemendikbud) with a focus on high-impact storytelling.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHASE 4: TACTICAL HUD -->
+        <section id="metrics" class="metrics">
+            <div class="section-header">
+                <span class="section-id">04</span>
+                <h2 class="section-title">TACTICAL_HUD: LIVE_METRICS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">QUANTUM_IMPRESSIONS</div>
+                    <div class="metric-value" data-target="25200000">0</div>
+                    <div class="metric-suffix">+</div>
+                    <div class="metric-pulse"></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">LEAD_CAPTURE_TOTAL</div>
+                    <div class="metric-value" data-target="12211">0</div>
+                    <div class="metric-suffix">UNITS</div>
+                    <div class="metric-pulse"></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">ORGANIC_ACCELERATION</div>
+                    <div class="metric-value" data-target="40">0</div>
+                    <div class="metric-suffix">%+ TRAFFIC_GROWTH</div>
+                    <div class="metric-pulse"></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">RESOURCE_OPTIMIZATION</div>
+                    <div class="metric-value" data-target="25">0</div>
+                    <div class="metric-suffix">%- CPC_REDUCTION</div>
+                    <div class="metric-pulse"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHASE 5: TECHNOLOGICAL ARSENAL -->
+        <section id="arsenal" class="arsenal">
+            <div class="section-header">
+                <span class="section-id">05</span>
+                <h2 class="section-title">TECHNOLOGICAL_ARSENAL</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="arsenal-grid">
+                <div class="power-module">
+                    <div class="module-hex">
+                        <svg viewBox="0 0 100 100" class="hex-svg">
+                            <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-border"/>
+                        </svg>
+                        <span class="module-icon">⚡</span>
+                    </div>
+                    <h3 class="module-name">AI_AUTOMATION</h3>
+                    <div class="module-specs">
+                        <span>Workflow Automation</span>
+                        <span>AI Agents</span>
+                        <span>CRM Integration</span>
+                    </div>
+                </div>
+                <div class="power-module">
+                    <div class="module-hex">
+                        <svg viewBox="0 0 100 100" class="hex-svg">
+                            <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-border"/>
+                        </svg>
+                        <span class="module-icon">🎯</span>
+                    </div>
+                    <h3 class="module-name">PERFORMANCE_ADS</h3>
+                    <div class="module-specs">
+                        <span>Meta Ads Orchestration</span>
+                        <span>Google Strategy</span>
+                        <span>TikTok Strategy</span>
+                    </div>
+                </div>
+                <div class="power-module">
+                    <div class="module-hex">
+                        <svg viewBox="0 0 100 100" class="hex-svg">
+                            <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-border"/>
+                        </svg>
+                        <span class="module-icon">⚙️</span>
+                    </div>
+                    <h3 class="module-name">SYSTEMS_ENGINEERING</h3>
+                    <div class="module-specs">
+                        <span>Industrial System Optimization</span>
+                        <span>Data Analysis</span>
+                    </div>
+                </div>
+                <div class="power-module">
+                    <div class="module-hex">
+                        <svg viewBox="0 0 100 100" class="hex-svg">
+                            <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-border"/>
+                        </svg>
+                        <span class="module-icon">🎬</span>
+                    </div>
+                    <h3 class="module-name">VISUAL_COMMAND</h3>
+                    <div class="module-specs">
+                        <span>Cinematography</span>
+                        <span>Adobe Creative Cloud</span>
+                        <span>Storytelling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHASE 6: EDUCATIONAL LOG -->
+        <section id="education" class="education">
+            <div class="section-header">
+                <span class="section-id">06</span>
+                <h2 class="section-title">EDUCATIONAL_LOG</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-card">
+                <div class="edu-source">[SOURCE: UNS_ACADEMIC_ARCHIVE]</div>
+                <div class="edu-degree">
+                    <span class="degree-type">B.Eng.</span>
+                    <h3 class="degree-title">Industrial Engineering</h3>
+                </div>
+                <div class="edu-institute">
+                    <span class="institute-label">INSTITUTE:</span>
+                    <span class="institute-name">Universitas Sebelas Maret (UNS)</span>
+                </div>
+                <div class="edu-logic">
+                    <span class="logic-label">LOGIC:</span>
+                    <p>Applying industrial optimization principles to solve complex marketing bottlenecks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHASE 7: CONTACT PROTOCOL -->
+        <section id="contact" class="contact">
+            <div class="section-header">
+                <span class="section-id">07</span>
+                <h2 class="section-title">CONTACT_PROTOCOL</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-prompt">
+                <div class="prompt-cursor">
+                    <span class="cursor-blink">></span>
+                </div>
+                <h3 class="prompt-text">INITIATE_CONTACT_PROTOCOL</h3>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:shafryyusuf@gmail.com" class="contact-link">
+                    <span class="link-icon">✉</span>
+                    <span class="link-label">[ENCRYPTED_LINK: EMAIL]</span>
+                </a>
+                <a href="https://linkedin.com/in/shafryyusuf" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <span class="link-icon">◈</span>
+                    <span class="link-label">[ENCRYPTED_LINK: LINKEDIN]</span>
+                </a>
+                <a href="https://wa.me/6281249877581" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <span class="link-icon">◉</span>
+                    <span class="link-label">[ENCRYPTED_LINK: WHATSAPP]</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SYSTEM FOOTER -->
+        <footer class="system-footer">
+            <div class="footer-line"></div>
+            <div class="footer-content">
+                <span>CONNECTION SECURE</span>
+                <span>//</span>
+                <span>END OF DATA STREAM</span>
+                <span>//</span>
+                <span class="footer-version">[2026 // JUN_OS_V3.0]</span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
