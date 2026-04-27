@@ -1,6 +1,6 @@
 :root {
     /* PERSONA 4 Color System - AGGRESSIVE YELLOW/BLACK/CRT */
-    --p4-yellow: #FFE600;
+    --p4-yellow: #D4A843;
     --p4-yellow-dim: #B8A800;
     --p4-black: #0A0A0A;
     --p4-black-light: #111111;
@@ -18,7 +18,7 @@
     --bg-tertiary: #111111;
     --bg-card: rgba(13, 13, 13, 0.85);
     
-    --accent-primary: #FFE600;
+    --accent-primary: #D4A843;
     --accent-secondary: #00F0FF;
     --accent-tertiary: #FF2A2A;
     --accent-green: #00FF88;
@@ -28,8 +28,8 @@
     --text-muted: #555555;
     
     --border-subtle: #222222;
-    --border-accent: #FFE600;
-    --border-glow: rgba(255, 230, 0, 0.3);
+    --border-accent: #D4A843;
+    --border-glow: rgba(212, 168, 67, 0.3);
     
     --font-display: 'Chakra Petch', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
@@ -87,8 +87,8 @@ body {
         0deg,
         rgba(0, 0, 0, 0) 0px,
         rgba(0, 0, 0, 0) 1px,
-        rgba(255, 230, 0, 0.015) 1px,
-        rgba(255, 230, 0, 0.015) 2px
+        rgba(212, 168, 67, 0.015) 1px,
+        rgba(212, 168, 67, 0.015) 2px
     );
 }
 
@@ -114,7 +114,7 @@ body {
     left: 0;
     width: 32px;
     height: 32px;
-    border: 2px solid rgba(255, 230, 0, 0.5);
+    border: 2px solid rgba(212, 168, 67, 0.5);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
@@ -128,7 +128,7 @@ body {
     left: 0;
     pointer-events: none;
     z-index: 9998;
-    background: rgba(255, 230, 0, 0.12);
+    background: rgba(212, 168, 67, 0.12);
     transform: translate(-50%, -50%);
     transition: opacity 0.2s, width 0.2s, height 0.2s;
 }
@@ -404,8 +404,8 @@ body.clicking .cursor-ring {
         0deg,
         transparent,
         transparent 2px,
-        rgba(255, 230, 0, 0.015) 2px,
-        rgba(255, 230, 0, 0.015) 4px
+        rgba(212, 168, 67, 0.015) 2px,
+        rgba(212, 168, 67, 0.015) 4px
     );
     animation: scanMove 4s linear infinite;
 }
@@ -664,7 +664,7 @@ body.clicking .cursor-ring {
     letter-spacing: 0.1em;
     padding: var(--space-xs) var(--space-md);
     border: 2px solid var(--p4-yellow);
-    background: rgba(255, 230, 0, 0.08);
+    background: rgba(212, 168, 67, 0.08);
     color: var(--p4-yellow);
     font-weight: 600;
     border-radius: 0;
@@ -710,7 +710,7 @@ body.clicking .cursor-ring {
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 2px solid rgba(255, 230, 0, 0.15);
+    border: 2px solid rgba(212, 168, 67, 0.15);
     border-radius: 50%;
     animation: rotateSlow 20s linear infinite;
 }
@@ -749,7 +749,7 @@ body.clicking .cursor-ring {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 230, 0, 0.05);
+    background: rgba(212, 168, 67, 0.05);
     box-shadow: 0 0 40px var(--border-glow);
     z-index: 2;
 }
@@ -769,7 +769,7 @@ body.clicking .cursor-ring {
 .orbit {
     position: absolute;
     inset: -20px;
-    border: 2px dashed rgba(255, 230, 0, 0.08);
+    border: 2px dashed rgba(212, 168, 67, 0.08);
     border-radius: 50%;
     animation: rotateSlow 10s linear infinite;
 }
@@ -1015,8 +1015,8 @@ body.clicking .cursor-ring {
 }
 
 .data-chip.deck-card.fanned:hover {
-    border-color: rgba(255, 230, 0, 0.4);
-    box-shadow: 0 0 30px rgba(255, 230, 0, 0.1);
+    border-color: rgba(212, 168, 67, 0.4);
+    box-shadow: 0 0 30px rgba(212, 168, 67, 0.1);
     transform: translateY(-4px);
 }
 
@@ -1140,9 +1140,9 @@ body.clicking .cursor-ring {
 }
 
 .metric-card:hover {
-    border-color: rgba(255, 230, 0, 0.4);
+    border-color: rgba(212, 168, 67, 0.4);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(255, 230, 0, 0.08);
+    box-shadow: 0 12px 40px rgba(212, 168, 67, 0.08);
 }
 
 .metric-label {
@@ -1221,7 +1221,7 @@ body.clicking .cursor-ring {
     inset: 0;
     background: linear-gradient(
         135deg,
-        rgba(255, 230, 0, 0.05) 0%,
+        rgba(212, 168, 67, 0.05) 0%,
         transparent 50%,
         rgba(0, 240, 255, 0.03) 100%
     );
@@ -1257,8 +1257,8 @@ body.clicking .cursor-ring {
 }
 
 .skill-card:hover {
-    border-color: rgba(255, 230, 0, 0.4);
-    box-shadow: 0 8px 32px rgba(255, 230, 0, 0.1);
+    border-color: rgba(212, 168, 67, 0.4);
+    box-shadow: 0 8px 32px rgba(212, 168, 67, 0.1);
 }
 
 .skill-content {
@@ -1503,7 +1503,7 @@ body.clicking .cursor-ring {
     color: var(--p4-yellow);
     box-shadow: 0 0 20px var(--border-glow);
     transform: translateY(-2px);
-    background: rgba(255, 230, 0, 0.05);
+    background: rgba(212, 168, 67, 0.05);
 }
 
 .link-icon {
@@ -1540,113 +1540,14 @@ body.clicking .cursor-ring {
     opacity: 0.8;
 }
 
-/* ─── EYE-CATCH TRANSITION (Persona 4 slash style) ─── */
-.eye-catch {
-    position: fixed;
-    inset: 0;
-    z-index: 9998;
-    pointer-events: none;
-    overflow: hidden;
-    opacity: 0;
-}
-
-.eye-catch.active {
-    opacity: 1;
-}
-
-.slash {
-    position: absolute;
-    width: 200%;
-    height: 120%;
-    transform: translateX(-150%) skewX(-25deg);
-}
-
-.slash-1 {
-    top: -20%;
-    left: -50%;
-    background: var(--p4-yellow);
-    animation: slashIn 0.15s ease-out forwards;
-}
-
-.slash-2 {
-    top: 10%;
-    left: -50%;
-    background: var(--p4-black);
-    animation: slashIn 0.15s ease-out 0.05s forwards;
-}
-
-.slash-3 {
-    top: 40%;
-    left: -50%;
-    background: var(--p4-red);
-    animation: slashIn 0.15s ease-out 0.1s forwards;
-}
-
-.slash-4 {
-    top: 70%;
-    left: -50%;
-    background: var(--p4-black);
-    animation: slashIn 0.15s ease-out 0.15s forwards;
-}
-
-.slash-5 {
-    top: 90%;
-    left: -50%;
-    background: var(--p4-yellow);
-    animation: slashIn 0.15s ease-out 0.2s forwards;
-}
-
-@keyframes slashIn {
-    0% { transform: translateX(-150%) skewX(-25deg); }
-    100% { transform: translateX(50%) skewX(-25deg); }
-}
-
-@keyframes slashOut {
-    0% { transform: translateX(50%) skewX(-25deg); }
-    100% { transform: translateX(250%) skewX(-25deg); }
-}
-
-.eye-catch.exit .slash-1 { animation: slashOut 0.12s ease-in forwards; }
-.eye-catch.exit .slash-2 { animation: slashOut 0.12s ease-in 0.02s forwards; }
-.eye-catch.exit .slash-3 { animation: slashOut 0.12s ease-in 0.04s forwards; }
-.eye-catch.exit .slash-4 { animation: slashOut 0.12s ease-in 0.06s forwards; }
-.eye-catch.exit .slash-5 { animation: slashOut 0.12s ease-in 0.08s forwards; }
-
-/* ─── ANIME SPEED LINES ─── */
-.speed-lines {
-    position: absolute;
-    inset: -50px;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.3;
-}
-
-.speed-line {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 200px;
-    background: linear-gradient(to bottom, transparent, var(--p4-yellow), transparent);
-    transform-origin: center top;
-    opacity: 0;
-    animation: speedLineBurst 2s ease-out infinite;
-}
-
-@keyframes speedLineBurst {
-    0% { opacity: 0; transform: translate(-50%, -50%) scaleY(0) rotate(var(--rotation)); }
-    20% { opacity: 0.8; }
-    100% { opacity: 0; transform: translate(-50%, -50%) scaleY(2) rotate(var(--rotation)); }
-}
-
 /* ─── ANIME PORTRAIT / SILHOUETTE ─── */
 .anime-portrait {
     position: relative;
     width: 140px;
     height: 160px;
     border: 3px solid var(--p4-yellow);
-    background: rgba(255, 230, 0, 0.05);
-    box-shadow: 0 0 40px var(--border-glow), inset 0 0 30px rgba(255, 230, 0, 0.05);
+    background: rgba(212, 168, 67, 0.05);
+    box-shadow: 0 0 40px var(--border-glow), inset 0 0 30px rgba(212, 168, 67, 0.05);
     z-index: 2;
     overflow: hidden;
 }
@@ -1666,7 +1567,7 @@ body.clicking .cursor-ring {
     align-items: flex-end;
     justify-content: center;
     padding: 8px;
-    filter: drop-shadow(0 0 8px rgba(255, 230, 0, 0.4));
+    filter: drop-shadow(0 0 8px rgba(212, 168, 67, 0.4));
 }
 
 .anime-silhouette svg {
@@ -1678,98 +1579,14 @@ body.clicking .cursor-ring {
 .portrait-glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(255, 230, 0, 0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(212, 168, 67, 0.15) 0%, transparent 70%);
     animation: portraitPulse 3s ease-in-out infinite;
     pointer-events: none;
 }
 
 @keyframes portraitPulse {
     0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
-}
-
-/* ─── IMPACT TEXT ANIMATION ─── */
-.impact-header .section-title {
-    position: relative;
-    display: inline-block;
-}
-
-.impact-header .section-title.impact {
-    animation: impactShake 0.4s ease-out;
-}
-
-.impact-header .section-title.impact::after {
-    content: attr(data-impact);
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: var(--p4-red);
-    opacity: 0;
-    animation: impactFlash 0.4s ease-out;
-}
-
-@keyframes impactShake {
-    0% { transform: scale(1); }
-    25% { transform: scale(1.08) translateX(-3px); }
-    50% { transform: scale(1.05) translateX(3px); }
-    75% { transform: scale(1.02) translateX(-1px); }
-    100% { transform: scale(1); }
-}
-
-@keyframes impactFlash {
-    0% { opacity: 0.8; transform: translate(-2px, -2px); }
-    30% { opacity: 0.6; transform: translate(2px, 2px); }
-    60% { opacity: 0.3; transform: translate(-1px, 1px); }
-    100% { opacity: 0; transform: translate(0, 0); }
-}
-
-/* ─── ANIME BRACKETS (Manga style) ─── */
-.anime-card {
-    position: relative;
-}
-
-.anime-brackets {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.anime-brackets span {
-    position: absolute;
-    font-size: 1.5rem;
-    color: var(--p4-yellow);
-    opacity: 0;
-    transition: opacity 0.2s;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.anime-card:hover .anime-brackets span {
-    opacity: 0.6;
-}
-
-.bracket-tl {
-    top: -6px;
-    left: -4px;
-}
-
-.bracket-tr {
-    top: -6px;
-    right: -4px;
-    transform: scaleX(-1);
-}
-
-.bracket-bl {
-    bottom: -6px;
-    left: -4px;
-    transform: scaleY(-1);
-}
-
-.bracket-br {
-    bottom: -6px;
-    right: -4px;
-    transform: scale(-1, -1);
+    50% { opacity: 1;
 }
 
 /* ─── SCROLL REVEAL ANIMATIONS ─── */

@@ -13,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initSkillCardTilt();
     initCRTNoise();
     initGlitchText();
-    initSpeedLines();
-    initEyeCatch();
-    initImpactText();
 });
 
 // ─── PHASE 0: BOOT SEQUENCE ───
@@ -299,7 +296,7 @@ function initGlitchText() {
         const originalColor = window.getComputedStyle(element).color;
         
         // Random color flash
-        const colors = ['#FFE600', '#00F0FF', '#FF2A2A'];
+        const colors = ['#D4A843', '#00F0FF', '#FF2A2A'];
         const flashColor = colors[Math.floor(Math.random() * colors.length)];
         
         element.style.color = flashColor;
@@ -607,107 +604,7 @@ function initSkillCardTilt() {
     });
 }
 
-// ─── ANIME SPEED LINES ───
-function initSpeedLines() {
-    const container = document.getElementById('speed-lines');
-    if (!container) return;
-    
-    const lineCount = 24;
-    for (let i = 0; i < lineCount; i++) {
-        const line = document.createElement('div');
-        line.className = 'speed-line';
-        const angle = (360 / lineCount) * i;
-        const delay = Math.random() * 2;
-        const duration = 1.5 + Math.random() * 1;
-        line.style.setProperty('--rotation', angle + 'deg');
-        line.style.animationDelay = delay + 's';
-        line.style.animationDuration = duration + 's';
-        line.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-        container.appendChild(line);
-    }
-}
-
-// ─── EYE-CATCH TRANSITION ───
-function initEyeCatch() {
-    const eyeCatch = document.getElementById('eye-catch');
-    if (!eyeCatch) return;
-    
-    const sections = document.querySelectorAll('section[id]');
-    let lastSection = null;
-    let isAnimating = false;
-    
-    const observer = new IntersectionObserver((entries) => {
-        if (isAnimating) return;
-        
-        entries.forEach(entry => {
-            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-                const currentSection = entry.target.id;
-                
-                if (lastSection && lastSection !== currentSection) {
-                    isAnimating = true;
-                    
-                    // Play slash sound if sound is on
-                    const AudioContext = window.AudioContext || window.webkitAudioContext;
-                    if (AudioContext) {
-                        try {
-                            const audioCtx = new AudioContext();
-                            const osc = audioCtx.createOscillator();
-                            const gain = audioCtx.createGain();
-                            osc.connect(gain);
-                            gain.connect(audioCtx.destination);
-                            osc.frequency.value = 200;
-                            osc.type = 'sawtooth';
-                            gain.gain.setValueAtTime(0.03, audioCtx.currentTime);
-                            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
-                            osc.start();
-                            osc.stop(audioCtx.currentTime + 0.15);
-                        } catch(e) {}
-                    }
-                    
-                    // Trigger eye-catch
-                    eyeCatch.classList.add('active');
-                    
-                    setTimeout(() => {
-                        eyeCatch.classList.add('exit');
-                        
-                        setTimeout(() => {
-                            eyeCatch.classList.remove('active', 'exit');
-                            isAnimating = false;
-                        }, 300);
-                    }, 350);
-                }
-                
-                lastSection = currentSection;
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    sections.forEach(section => observer.observe(section));
-}
-
-// ─── IMPACT TEXT FOR SECTION HEADERS ───
-function initImpactText() {
-    const impactHeaders = document.querySelectorAll('.impact-header');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const title = entry.target.querySelector('.section-title');
-                if (title) {
-                    title.classList.add('impact');
-                    setTimeout(() => {
-                        title.classList.remove('impact');
-                    }, 400);
-                }
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.6 });
-    
-    impactHeaders.forEach(header => observer.observe(header));
-}
-
 // ─── CONSOLE EASTER EGG ───
-console.log('%cJUN_OS_V3.0', 'font-size: 24px; font-weight: bold; color: #FFE600; text-shadow: 0 0 10px #FFE600;');
+console.log('%cJUN_OS_V3.0', 'font-size: 24px; font-weight: bold; color: #D4A843; text-shadow: 0 0 10px #D4A843;');
 console.log('%cSystem initialized. Welcome, SHAFRY YUSUF AL JUNI.', 'font-size: 12px; color: #00F0FF;');
 console.log('%cConnection secure. All archives verified.', 'font-size: 10px; color: #888;');
